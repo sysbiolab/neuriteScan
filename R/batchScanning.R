@@ -2,13 +2,16 @@
 #'
 #' Function that scans images in batch mode.
 #'
-#' @param path The file directory containing the images for analysis
-#' @param fflag The pattern observed in the name of the files
+#' @param path The file directory containing the images for analysis.
+#' @param fflag The pattern observed in the name of the files.
 #' @param resdir The name of the directory that will be created for the storage
-#' of the resulting files
-#' @param bandwidth describe
-#' @param fp describe
-#' @param lenghLimit An integer value to define the minimum size to be consider
+#' of the resulting files.
+#' @param bandwidth An integer value to define the width of the band to be
+#' considered. As higher the bandwidth higher the band to be considered during
+#' segmentation.
+#' @param fpicks Defines the precision of the extensions to be considered. As
+#' higher the fpicks less extensions are identified in the segmentation.
+#' @param lengthLimit An integer value to define the minimum size to be consider
 #' as a neurite length. The value is in number of pixels.
 #' @param gridscan An integer value to define the size of the grid that will be
 #' applicated to the segmented image.
@@ -20,7 +23,6 @@
 #' @seealso \code{\link{channelSegmentation}}
 #' @seealso \code{\link{neuriteScan}}
 #'
-#' @examples
 #'
 #' @importFrom EBImage readImage writeImage distmap
 #' @export

@@ -1,18 +1,21 @@
 #' Two-channel segmentation of an image object
 #'
-#' Function that runs two-channel segmentation for one image.
+#' Function that runs two-channel segmentation in the image.
 #'
 #' @param img An image object as input to be segmented.
-#' @param nwin describe
-#' @param smooth describe
-#' @param minShape describe
-#' @param maxShape describe
+#' @param nwin An integer value for number of windows for threshold calculation.
+#' @param smooth An integer value for setting image smoothing.
+#' @param minShape An integer value for setting the minimum size for the shape.
+#' @param maxShape An integer value for setting the maximum size for the shape.
 #' @param channelnuc A character variable to define the channel color for
 #' the nucleus staining.
 #' @param channelcyto A character variable to define the channel color for
 #' the cytoplasm staining.
-#' @param bandwidth describe
-#' @param fpicks describe
+#' @param bandwidth An integer value to define the width of the band to be
+#' considered. As higher the bandwidth higher the band to be considered during
+#' segmentation.
+#' @param fpicks Defines the precision of the extensions to be considered. As
+#' higher the fpicks less extensions are identified in the segmentation.
 #' @param colnuc A character variable to define the color of the nucleus in the
 #' resulting painted image.
 #' @param colcyto A character variable to define the color of the cytoplasm in
