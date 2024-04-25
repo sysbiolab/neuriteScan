@@ -1,5 +1,5 @@
 # neuriteScan
-A R Package for neurite image analysis. neuriteScan quantifies neurite density and other significant measures for experiments in Neuroscience area of research.
+An R Package for neurite image analysis. neuriteScan quantifies neurite density and other significant measures for experiments in Neuroscience area of research.
 
 ## Dependencies
 
