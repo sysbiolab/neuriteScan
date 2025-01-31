@@ -17,8 +17,8 @@ BiocManager::install("EBImage")
 ```{r}
 install.packages("reticulate")
 library(reticulate)
-py_install("numpy")
-py_install("skimage")
+py_install("numpy==1.26.4")
+py_install("skimage==0.23.1")
 py_install("skimage.restoration")
 ```
 
