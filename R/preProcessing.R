@@ -38,12 +38,12 @@ preProcessing <- function(img, fast_mode = TRUE,
   skimage <- reticulate::import("skimage")
   skirest <- reticulate::import("skimage.restoration")
 
-  sigma_est <- numpy$mean(skirest$estimate_sigma(img, multichannel = TRUE))
+  sigma_est <- numpy$mean(skirest$estimate_sigma(img, average_sigmas = F,
+                                                 channel_axis = as.integer(-1)))
   nlm <- skirest$denoise_nl_means(img, h = (1.15 * sigma_est),
-                                  fast_mode = fast_mode,
-                                  patch_size = as.integer(patch_size),
-                                  patch_distance = as.integer(patch_distance),
-                                  multichannel = TRUE)
+                                  fast_mode = TRUE, patch_size = as.integer(5),
+                                  patch_distance = as.integer(6),
+                                  channel_axis = as.integer(-1))
   img <- Image(nlm, colormode = Color)
   return(img)
 }
